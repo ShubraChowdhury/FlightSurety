@@ -25,6 +25,8 @@ contract('Oracles', async (accounts) => {
     // ARRANGE
     let fee = await config.flightSuretyApp.REGISTRATION_FEE.call();
 
+    //console.log("SHUBRA REGISTRATION FEES ="+ fee + " ether" );
+
     // ACT
     for(let a=1; a<TEST_ORACLES_COUNT; a++) {      
       await config.flightSuretyApp.registerOracle({ from: accounts[a], value: fee });
@@ -40,7 +42,10 @@ contract('Oracles', async (accounts) => {
     let timestamp = Math.floor(Date.now() / 1000);
 
     // Submit a request for oracles to get status information for a flight
-    await config.flightSuretyApp.fetchFlightStatus(config.firstAirline, flight, timestamp);
+    //console.log("SHUBRA fconfig.firstAirline ="+ config.firstAirline + " ======" );
+    let feeflight_status = await config.flightSuretyApp.fetchFlightStatus(config.firstAirline, flight, timestamp);
+    //console.log("SHUBRA feeflight_status ="+ feeflight_status + " ======" );
+
     // ACT
 
     // Since the Index assigned to each test account is opaque by design
