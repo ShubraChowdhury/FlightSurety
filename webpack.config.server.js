@@ -11,8 +11,8 @@ module.exports = {
     watch: true,
     target: 'node',
     externals: [nodeExternals({
-        //whitelist: ['webpack/hot/poll?1000'] Changed by Shubra
         allowlist: ['webpack/hot/poll?1000']
+        //whitelist: ['webpack/hot/poll?1000']
     })],
     module: {
         rules: [{

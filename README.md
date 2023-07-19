@@ -21,13 +21,19 @@ To run truffle tests:
 To use the dapp:
 
 `truffle migrate`
+
+On local Machine before running dapp run the below mentioned
+`export NODE_OPTIONS=--openssl-legacy-provider`
 `npm run dapp`
 
 To view dapp:
 
 `http://localhost:8000`
 
-## Develop Server
+## Develop 
+
+On local Machine before running server run the below mentioned
+`export NODE_OPTIONS=--openssl-legacy-provider`
 
 `npm run server`
 `truffle test ./test/oracles.js`
@@ -50,3 +56,12 @@ Deploy the contents of the ./dapp folder
 * [Solidity Language Reference](http://solidity.readthedocs.io/en/v0.4.24/)
 * [Ethereum Blockchain Explorer](https://etherscan.io/)
 * [Web3Js Reference](https://github.com/ethereum/wiki/wiki/JavaScript-API)
+
+
+Reffered 
+https://knowledge.udacity.com/questions/334014
+https://knowledge.udacity.com/questions/540248
+https://knowledge.udacity.com/?nanodegree=nd1309&page=1&project=564&query=payable&rubric=3609
+https://knowledge.udacity.com/questions/996488
+https://knowledge.udacity.com/questions/990715
+https://knowledge.udacity.com/questions/986436
