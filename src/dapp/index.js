@@ -1,4 +1,3 @@
-
 import DOM from './dom';
 import Contract from './contract';
 import './flightsurety.css';
@@ -21,10 +20,23 @@ import './flightsurety.css';
         DOM.elid('submit-oracle').addEventListener('click', () => {
             let flight = DOM.elid('flight-number').value;
             // Write transaction
-            contract.fetchFlightStatus(flight, (error, result) => {
+
+      contract.fetchFlightStatus(flight, (error, result) => {
                 display('Oracles', 'Trigger oracles', [ { label: 'Fetch Flight Status', error: error, value: result.flight + ' ' + result.timestamp} ]);
-            });
-        })
+            }); 
+           })
+
+
+        DOM.elid('click_register_oracles').addEventListener('click', async () => {
+            let regFee = DOM.elid('get_registration_fee').value;
+
+        contract.registerOracle(regFee, (error, result) => {  
+        display('Oracles', 'Trigger oracles', [ { label: 'Register First Flight', error: error, value: result.regFee + ' ' + result.timestamp}]);    
+        });
+
+
+        });
+
     
     });
     
@@ -46,10 +58,3 @@ function display(title, description, results) {
     displayDiv.append(section);
 
 }
-
-
-
-
-
-
-

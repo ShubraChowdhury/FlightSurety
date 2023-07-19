@@ -19,13 +19,37 @@
         </button>
     </nav>
 
+
     <main class="container">
 
         <div id="display-wrapper" class="top-20">
         </div>
+
         <div class="row top-20">
-            <label class="form">Flight</label> <input type="text" id="flight-number"> <btn class="btn btn-primary" id="submit-oracle">Submit to Oracles</btn>
+            <label class="form">Flight</label>
+        <!--<input type="text" id="flight-number"  >  -->
+        <input list="flight-numbers" name="flight-number" id="flight-number">  <datalist id="flight-numbers">  <option value="AC8617">  <option value="AC061">
+          <option value="OZ106">  </datalist>
+         <btn class="btn btn-primary" id="submit-oracle">Submit to Oracles</btn>
         </div>
+
+        <div class="top-20">   
+            <label class="form">Registration fee (ETH)</label><input type="text" id="get_registration_fee" maxlength="6" size="4" value="2"/>
+            <btn class="btn btn-primary" id="click_register_oracles">Register First oracles</btn> 
+        </div>
+
+       
+       
+        <div class="top-20"><h4>Register Airline</h4></div>
+        <div class="top-20">
+            <label class="form">Airline</label><select id="airlines-airline-dropdown"></select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <btn class="btn btn-primary" id="airlines-register-airlines">Register starting airlines</btn>
+        </div>
+
+ 
+ 
+ 
+ 
     </main>
 
 </body>
